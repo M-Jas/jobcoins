@@ -1,12 +1,11 @@
 // Libs
 import React from 'react';
 import { View, Text } from 'react-native';
-import { NavigationScreenProps } from '@types';
 import makeStyles from '@styles/makeStyles';
 import { Icon } from 'react-native-elements';
-import useTheme from '@styles/useTheme';
+import useTheme from '@contexts/ThemeContext';
 
-interface HomeProps extends NavigationScreenProps {}
+interface HomeProps {}
 
 const Home = ({}: HomeProps) => {
   const styles = useStyles();

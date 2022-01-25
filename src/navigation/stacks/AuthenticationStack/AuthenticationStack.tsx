@@ -1,4 +1,4 @@
-import useTheme from '@styles/useTheme';
+import useTheme from '@contexts/ThemeContext';
 import React from 'react';
 import Login from '@screens/Login';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -14,7 +14,8 @@ const AuthenticationStack = ({ ...other }) => {
         // ...defaultScreenOptions,
         headerShown: false,
       }}
-      {...other}>
+      {...other}
+    >
       {/* Push Authentication Screens */}
       <Stack.Group>
         <Stack.Screen name="Loging" component={Login} />

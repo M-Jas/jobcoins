@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { StyleSheet } from 'react-native';
 import mergeStyles from '../mergeStyles';
 import { StylesHook, StylesOrCreator } from '../types';
-import useTheme from '../useTheme';
+import useTheme from '@contexts/ThemeContext';
 
 /**
  * makeStyles: is a custom hook that takes either a styles object {color: 'red'} or

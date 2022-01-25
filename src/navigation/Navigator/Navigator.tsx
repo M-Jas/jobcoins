@@ -1,6 +1,6 @@
 import useAuthContext from '@contexts/AuthContext';
 import { StatusBar, View } from 'react-native';
-import useTheme from '@styles/useTheme';
+import useTheme from '@contexts/ThemeContext';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import AuthenticationStack from '../stacks/AuthenticationStack';
 import React from 'react';

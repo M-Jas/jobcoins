@@ -1,6 +1,6 @@
 import createTheme from '@styles/createTheme';
 import React from 'react';
-import { ThemeContext } from '@styles/useTheme';
+import { ThemeContext } from '@contexts/ThemeContext';
 import { useColorScheme } from 'react-native';
 
 interface ThemeProviderProps {
