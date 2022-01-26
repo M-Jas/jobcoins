@@ -41,7 +41,7 @@
     "baseUrl": "." /* Base directory to resolve non-absolute module names. */,
     "paths": {
       "@app/*": ["src/app/*"],
-      "@components/*": ["src/components/*"],
+      "@components": ["src/components"],
       "@contexts/*": ["src/contexts/*"],
       "@navigation/*": ["src/navigation/*"],
       "@providers/*": ["src/providers/*"],

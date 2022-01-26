@@ -1,1 +1,8 @@
-export { default } from './Home';
+import Home from './Home';
+
+const HomeScreen = {
+  name: 'HomeScreen',
+  component: Home,
+};
+
+export default HomeScreen;

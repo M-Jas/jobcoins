@@ -1,7 +1,7 @@
 // Libs
 import React from 'react';
 import { Text, View } from 'react-native';
-import { Input, Button } from './components';
+import { Input, Button } from '@components';
 import makeStyles from '@styles/makeStyles';
 import useAuth from '@contexts/AuthContext';
 /**
@@ -16,11 +16,11 @@ import useAuth from '@contexts/AuthContext';
 interface LoginProps {}
 
 const Login = ({ ...other }: LoginProps) => {
-  const { signIn } = useAuth();
+  const { actions } = useAuth();
   const styles = useStyles();
 
   const handleSignInPress = () => {
-    signIn();
+    actions.signIn('MICHAEL_COIN_ADDRESS');
   };
 
   return (

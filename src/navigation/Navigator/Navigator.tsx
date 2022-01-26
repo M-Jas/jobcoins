@@ -3,12 +3,12 @@ import { StatusBar, View } from 'react-native';
 import useTheme from '@contexts/ThemeContext';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import AuthenticationStack from '../stacks/AuthenticationStack';
+import MainStack from '../stacks/MainStack';
 import React from 'react';
 
 const Navigator = ({ ...other }) => {
   const { palette } = useTheme();
-  /** Our authstate/current member */
-  const { authToken } = useAuthContext();
+  const { state } = useAuthContext();
 
   // Before initialization is finished the authState starts empty
   // if (_isEmpty(authState)) {
@@ -22,7 +22,7 @@ const Navigator = ({ ...other }) => {
         theme={{ ...DefaultTheme, colors: { ...DefaultTheme.colors } }}
         {...other}
       >
-        {!authToken ? <AuthenticationStack /> : <View />}
+        {!state?.credentials ? <AuthenticationStack /> : <MainStack />}
       </NavigationContainer>
     </>
   );

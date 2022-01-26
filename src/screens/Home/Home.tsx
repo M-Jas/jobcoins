@@ -4,10 +4,13 @@ import { View, Text } from 'react-native';
 import makeStyles from '@styles/makeStyles';
 import { Icon } from 'react-native-elements';
 import useTheme from '@contexts/ThemeContext';
+import { Button } from '@components';
+import useAuth from '@contexts/AuthContext';
 
 interface HomeProps {}
 
 const Home = ({}: HomeProps) => {
+  const { actions } = useAuth();
   const styles = useStyles();
   const { palette } = useTheme();
 
@@ -21,6 +24,7 @@ const Home = ({}: HomeProps) => {
           color={palette.secondary}
         />
       </View>
+      <Button title="Logout" onPress={actions.signOut} />
     </View>
   );
 };
@@ -30,6 +34,7 @@ const useStyles = makeStyles(({ palette, spacing, typography }) => ({
     padding: spacing.unit * 2,
     backgroundColor: palette.black,
     flex: 1,
+    paddingTop: 200,
   },
   header: {
     flexDirection: 'row',
