@@ -16,11 +16,11 @@ import useAuth from '@contexts/AuthContext';
 interface LoginProps {}
 
 const Login = ({ ...other }: LoginProps) => {
-  const { actions } = useAuth();
+  const { authActions } = useAuth();
   const styles = useStyles();
 
   const handleSignInPress = () => {
-    actions.signIn('MICHAEL_COIN_ADDRESS');
+    authActions.signIn('MJ_ADDRESS');
   };
 
   return (

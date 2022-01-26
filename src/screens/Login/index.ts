@@ -1,1 +1,8 @@
-export { default } from './Login';
+import Login from './Login';
+
+const LoginScreen = {
+  name: 'LoginScreen',
+  component: Login,
+};
+
+export default LoginScreen;

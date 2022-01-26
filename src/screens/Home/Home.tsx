@@ -10,7 +10,7 @@ import useAuth from '@contexts/AuthContext';
 interface HomeProps {}
 
 const Home = ({}: HomeProps) => {
-  const { actions } = useAuth();
+  const { authActions } = useAuth();
   const styles = useStyles();
   const { palette } = useTheme();
 
@@ -24,7 +24,7 @@ const Home = ({}: HomeProps) => {
           color={palette.secondary}
         />
       </View>
-      <Button title="Logout" onPress={actions.signOut} />
+      <Button title="Logout" onPress={authActions.signOut} />
     </View>
   );
 };

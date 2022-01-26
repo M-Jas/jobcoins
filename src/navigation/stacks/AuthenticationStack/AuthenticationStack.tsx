@@ -1,6 +1,6 @@
 import useTheme from '@contexts/ThemeContext';
 import React from 'react';
-import Login from '@screens/Login';
+import LoginScreen from '@screens/Login';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
@@ -18,7 +18,10 @@ const AuthenticationStack = ({ ...other }) => {
     >
       {/* Push Authentication Screens */}
       <Stack.Group>
-        <Stack.Screen name="Loging" component={Login} />
+        <Stack.Screen
+          name={LoginScreen.name}
+          component={LoginScreen.component}
+        />
       </Stack.Group>
 
       {/* Modal Help Screens */}
