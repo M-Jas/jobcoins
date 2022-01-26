@@ -21,11 +21,6 @@ const reducer = (state: AuthState, action: AuthAction) => {
         ...state,
         isLoading: false,
         accessToken,
-        // : credentials,
-        // credentials: {
-        //   ...state.credentials,
-        //   accessToken: credentials,
-        // },
       };
     case ActionType.SignIn:
       return {
@@ -33,11 +28,6 @@ const reducer = (state: AuthState, action: AuthAction) => {
         isLoading: false,
         accessToken,
         userAddress,
-        // accessToken: credentials,
-        // credentials: {
-        //   ...state.credentials,
-        //   accessToken: credentials?.accessToken,
-        // },
       };
     case ActionType.SignOut:
       return {
@@ -65,7 +55,6 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
   const [state, dispatch] = useReducer(reducer, {
     isLoading: true,
     accessToken: null,
-    // userAddress: null,
   });
 
   const actions = useMemo(
@@ -73,12 +62,10 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
       initialize: async () => {
         // Check if the current user has a Access Token
         const accessToken = await AsyncStorage.getItem(TOKEN_STORAGE_KEY);
-        console.log('ACCESSS TOKEN', accessToken);
 
         dispatch({
           type: ActionType.Initialize,
           accessToken,
-          // credentials: { accessToken },
         });
       },
       signIn: async (userAddress: string) => {

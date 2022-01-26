@@ -39,7 +39,6 @@ const useStyles = makeStyles(({ palette, spacing, typography }) => {
       flex: 1,
       paddingTop: 100,
       padding: spacing.unit * 2,
-      // justifyContent: 'center',
     },
     title: {
       ...typography.headingTitle,
